@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'EMIDynamicTextViewManager_Example', :exclusive => true do
+  pod "EMIDynamicTextViewManager", :path => "../"
+end
+
+target 'EMIDynamicTextViewManager_Tests', :exclusive => true do
+  pod "EMIDynamicTextViewManager", :path => "../"
+
+  
+end
