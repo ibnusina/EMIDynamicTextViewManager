@@ -1,0 +1,6 @@
+framework module EMIDynamicTextViewManager {
+  umbrella header "EMIDynamicTextViewManager-umbrella.h"
+
+  export *
+  module * { export * }
+}

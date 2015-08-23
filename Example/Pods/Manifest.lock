@@ -1,0 +1,23 @@
+PODS:
+  - EMIDynamicTextViewManager (0.1.0):
+    - ReactiveCocoa (= 2.3.1)
+  - ReactiveCocoa (2.3.1):
+    - ReactiveCocoa/UI (= 2.3.1)
+  - ReactiveCocoa/Core (2.3.1):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.3.1)
+  - ReactiveCocoa/UI (2.3.1):
+    - ReactiveCocoa/Core
+
+DEPENDENCIES:
+  - EMIDynamicTextViewManager (from `../`)
+
+EXTERNAL SOURCES:
+  EMIDynamicTextViewManager:
+    :path: ../
+
+SPEC CHECKSUMS:
+  EMIDynamicTextViewManager: fb716f791b25044815705d861111363866f6ede2
+  ReactiveCocoa: 334468a83b2c5f669f7cfb9a084415ee23219b4f
+
+COCOAPODS: 0.38.2

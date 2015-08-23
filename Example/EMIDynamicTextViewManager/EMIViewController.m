@@ -7,8 +7,15 @@
 //
 
 #import "EMIViewController.h"
+#import <EMIDynamicTextViewManager/EMIDynamicTextViewManager.h>
+#import <ReactiveCocoa/RACSignal.h>
+#import <ReactiveCocoa/RACTuple.h>
+#import <ReactiveCocoa/RACEXTScope.h>
 
 @interface EMIViewController ()
+@property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *textViewHeightConstraint;
+@property (strong, nonatomic) EMIDynamicTextViewManager *textViewManager;
 
 @end
 
@@ -17,7 +24,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    self.textViewManager = [[EMIDynamicTextViewManager alloc] initWithTextView:self.textView];
+    @weakify(self)
+    [[self.textViewManager textViewDidChangeSignal] subscribeNext:^(RACTuple *tuple) {
+        @strongify(self)
+        NSNumber *isChange = (NSNumber *)tuple.first;
+        NSNumber *newHeight = (NSNumber *)tuple.second;
+        if ([isChange boolValue]) {
+            self.textViewHeightConstraint.constant = [newHeight floatValue];
+        }
+    }];
+    
+    [self.textViewManager setPlaceholder:@"test"];
 }
 
 - (void)didReceiveMemoryWarning

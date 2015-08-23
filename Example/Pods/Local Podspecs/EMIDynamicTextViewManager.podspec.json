@@ -1,0 +1,30 @@
+{
+  "name": "EMIDynamicTextViewManager",
+  "version": "0.1.0",
+  "summary": "A short description of EMIDynamicTextViewManager.",
+  "description": "",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/EMIDynamicTextViewManager",
+  "license": "MIT",
+  "authors": {
+    "Ibnu Sina": "ibnu.sina009@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/EMIDynamicTextViewManager.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "EMIDynamicTextViewManager": [
+      "Pod/Assets/*.png"
+    ]
+  },
+  "dependencies": {
+    "ReactiveCocoa": [
+      "2.3.1"
+    ]
+  }
+}
